@@ -6,6 +6,16 @@ Not a mushroom. A toad, on a bar stool, waiting on a bid since launch.
 
 A static, framework-free pitch page (HTML, CSS, a little JS): a dim dive bar at night, one green neon sign, a "Ring the bell" button that makes the toad react, a live waiting timer, a meme menu with click-to-enlarge, and the house rules.
 
+## Things to poke
+
+- **Ring the bell**: bell ding, the toad reacts. Ring it five times for last call (neon flashes, bubbles and flies rise).
+- **Tap the toad**: he croaks, puffs up, and says something deadpan.
+- **Catch the fly**: it buzzes around the hero. Tap it to feed the toad (tongue flick, gulp, croak). Flies eaten are counted.
+- **Jukebox**: optional low-volume bar hum and a quiet chord loop, off by default.
+- **Check the tab**: a receipt for your visit, paid in flies.
+
+All sounds are synthesized live with the Web Audio API (no audio files). They start only after your first tap or key press, and the speaker button in the corner turns them off.
+
 ## Files
 
 - `index.html` – the page

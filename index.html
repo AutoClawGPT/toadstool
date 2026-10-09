@@ -33,9 +33,24 @@
 <a class="skip" href="#joke">Skip to the joke</a>
 
 <header class="hero" id="top">
-  <div class="hero__photo" aria-hidden="true"></div>
+  <div class="hero__photo" aria-hidden="true"><img class="hero__img" id="heroImg" src="/hero.jpg" alt="" width="1280" height="720" fetchpriority="high"></div>
+  <div class="stage" id="stage">
+    <button class="toad-hit" id="toad" type="button" aria-label="Poke the toad"></button>
+    <div class="tongue" id="tongue" aria-hidden="true"></div>
+    <p class="bubble" id="bubble" role="status" aria-live="polite"></p>
+    <button class="fly" id="fly" type="button" aria-label="Catch the fly and feed the toad">
+      <svg viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+        <ellipse class="fly__wing fly__wing--l" cx="15" cy="13" rx="7" ry="10" />
+        <ellipse class="fly__wing fly__wing--r" cx="25" cy="13" rx="7" ry="10" />
+        <ellipse cx="20" cy="22" rx="6" ry="9" fill="#1a120c" />
+        <circle cx="20" cy="13" r="5" fill="#241810" />
+        <circle cx="17.6" cy="12" r="2.2" fill="#8c2a1c" />
+        <circle cx="22.4" cy="12" r="2.2" fill="#8c2a1c" />
+      </svg>
+    </button>
+  </div>
   <div class="hero__inner">
-    <p class="neon" aria-label="Toadstool neon sign"><span class="neon__text">TOADSTOOL</span><span class="neon__open">open late</span></p>
+    <p class="neon" aria-label="Toadstool neon sign"><span class="neon__text" id="neonText">TOADSTOOL</span><span class="neon__open">open late</span></p>
     <div class="hero__copy">
       <h1 class="title">Toadstool <span class="ticker">$TOADSTOOL</span></h1>
       <p class="hero__line">Not a mushroom. A toad, on a bar stool, waiting on a bid since launch.</p>
@@ -47,8 +62,10 @@
         <dl class="tab">
           <div><dt>Waiting on a bid since launch</dt><dd id="timer">00:00:00</dd></div>
           <div><dt>Bells rung tonight</dt><dd id="rings">0</dd></div>
+          <div><dt>Flies eaten</dt><dd id="eaten">0</dd></div>
         </dl>
       </div>
+      <p class="hint">Tap the toad. Catch the fly. Five bells is last call. <button class="tab-link" id="tabBtn" type="button">Check the tab</button></p>
     </div>
   </div>
 </header>
@@ -111,6 +128,35 @@
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="fizz" id="fizz" aria-hidden="true"></div>
+
+<div class="controls">
+  <button class="ctrl" id="soundBtn" type="button" aria-pressed="true" aria-label="Sound on" title="Sound on/off">
+    <svg class="ico-on" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <svg class="ico-off" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <button class="ctrl ctrl--wide" id="jukeBtn" type="button" aria-pressed="false" title="Bar ambience: hum and a quiet jukebox">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M9 17.5A2.5 2.5 0 1 1 7 15.05V5l11-2v12.5a2.5 2.5 0 1 1-2-2.45V6.4l-7 1.27z"/></svg>
+    <span id="jukeLabel">Jukebox off</span>
+  </button>
+</div>
+
+<dialog class="receipt" id="receipt" aria-labelledby="receipt-h">
+  <h2 id="receipt-h">The tab</h2>
+  <p class="receipt__sub">Stool 1, end of the bar</p>
+  <table>
+    <tbody>
+      <tr><td>Time on the stool</td><td id="rTime">00:00:00</td></tr>
+      <tr><td>Bells rung</td><td id="rRings">0</td></tr>
+      <tr><td>Flies eaten</td><td id="rFlies">0</td></tr>
+      <tr><td>Croaks</td><td id="rCroaks">0</td></tr>
+      <tr><td>Last calls</td><td id="rLast">0</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total</td><td id="rTotal">0 flies</td></tr></tfoot>
+  </table>
+  <p class="receipt__note">Paid in flies. The stool is on the house.</p>
+  <form method="dialog"><button class="receipt__close" type="submit">Close the tab</button></form>
+</dialog>
 
 <dialog class="lightbox" id="lightbox" aria-label="Enlarged meme">
   <form method="dialog"><button class="lightbox__close" type="submit" aria-label="Close">Close</button></form>
