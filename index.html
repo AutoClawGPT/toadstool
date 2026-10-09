@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toadstool ($TOADSTOOL)</title>
+<meta name="description" content="Not a mushroom. A toad, on a bar stool, waiting on a bid since launch.">
+<meta name="theme-color" content="#24170f">
+<link rel="canonical" href="https://toadstool-coin.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Toadstool">
+<meta property="og:title" content="Toadstool ($TOADSTOOL)">
+<meta property="og:description" content="Not a mushroom. A toad, on a bar stool, waiting on a bid since launch.">
+<meta property="og:url" content="https://toadstool-coin.vercel.app/">
+<meta property="og:image" content="https://toadstool-coin.vercel.app/logo.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="A toad sitting on a wooden bar stool next to a shot glass">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Toadstool ($TOADSTOOL)">
+<meta name="twitter:description" content="Not a mushroom. A toad, on a bar stool, waiting on a bid since launch.">
+<meta name="twitter:image" content="https://toadstool-coin.vercel.app/logo.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" href="/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#joke">Skip to the joke</a>
+
+<header class="hero" id="top">
+  <div class="hero__photo" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="neon" aria-label="Toadstool neon sign"><span class="neon__text">TOADSTOOL</span><span class="neon__open">open late</span></p>
+    <div class="hero__copy">
+      <h1 class="title">Toadstool <span class="ticker">$TOADSTOOL</span></h1>
+      <p class="hero__line">Not a mushroom. A toad, on a bar stool, waiting on a bid since launch.</p>
+      <div class="counter" role="group" aria-label="Bar counter">
+        <button class="bell" id="bell" type="button">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3a1.5 1.5 0 0 1 1.5 1.5v.6A6.5 6.5 0 0 1 18.5 11.5V15l1.8 2.2a.8.8 0 0 1-.6 1.3H4.3a.8.8 0 0 1-.6-1.3L5.5 15v-3.5a6.5 6.5 0 0 1 5-6.4v-.6A1.5 1.5 0 0 1 12 3Zm-2.2 16.5h4.4a2.2 2.2 0 0 1-4.4 0Z"/></svg>
+          Ring the bell
+        </button>
+        <dl class="tab">
+          <div><dt>Waiting on a bid since launch</dt><dd id="timer">00:00:00</dd></div>
+          <div><dt>Bells rung tonight</dt><dd id="rings">0</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="joke" id="joke" aria-labelledby="joke-h">
+    <h2 id="joke-h">The joke</h2>
+    <p class="lede">Everyone hears “toadstool” and pictures a mushroom. We pictured a toad, sitting on a stool, at the end of the bar.</p>
+    <p>He has been there since launch. He is not upset. He has a drink, a good stool and a view of the door, and he is waiting on a bid like everyone else in the trench.</p>
+    <p>That is the whole coin. A toad. A stool. Patience you could set a clock by.</p>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="menu__board">
+      <h2 id="menu-h">The menu</h2>
+      <p class="menu__note">Tonight’s specials. Tap a card to see it up close.</p>
+      <ul class="menu__list">
+        <li>
+          <button class="card" type="button" data-src="/wait.jpg" data-alt="A toad on a small wooden stool beside a phone showing a chart. Caption: Day 1 of waiting on a bid. Still on the stool.">
+            <span class="card__frame"><img src="/wait.jpg" alt="A toad on a small wooden stool beside a phone showing a chart. Caption: Day 1 of waiting on a bid. Still on the stool." width="1280" height="720" decoding="async"></span>
+            <span class="card__row"><span class="card__name">The day one</span><span class="card__dots" aria-hidden="true"></span><span class="card__price">2 flies</span></span>
+            <span class="card__desc">Served neat, with a chart on the side.</span>
+          </button>
+        </li>
+        <li>
+          <button class="card" type="button" data-src="/mushroom.jpg" data-alt="A sad mushroom and a calm toad on neighbouring bar stools. Caption: They said toadstool. I said toad. On a stool.">
+            <span class="card__frame"><img src="/mushroom.jpg" alt="A sad mushroom and a calm toad on neighbouring bar stools. Caption: They said toadstool. I said toad. On a stool." width="1280" height="720" decoding="async"></span>
+            <span class="card__row"><span class="card__name">The mix-up</span><span class="card__dots" aria-hidden="true"></span><span class="card__price">3 flies</span></span>
+            <span class="card__desc">The mushroom is not with us.</span>
+          </button>
+        </li>
+        <li>
+          <button class="card" type="button" data-src="/bid.jpg" data-alt="A toad leaning on a bar under a green neon sign. Caption: When somebody finally bids. Bartender, one more fly.">
+            <span class="card__frame"><img src="/bid.jpg" alt="A toad leaning on a bar under a green neon sign. Caption: When somebody finally bids. Bartender, one more fly." width="1280" height="720" decoding="async"></span>
+            <span class="card__row"><span class="card__name">The first bid</span><span class="card__dots" aria-hidden="true"></span><span class="card__price">1 fly</span></span>
+            <span class="card__desc">Ordered every time the bell rings.</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rules" id="rules" aria-labelledby="rules-h">
+    <div class="plaque">
+      <h2 id="rules-h">House rules</h2>
+      <ul>
+        <li>One toad. One stool. No mushrooms.</li>
+        <li>The stool does not move.</li>
+        <li>Tips accepted in flies.</li>
+        <li>No standing on the bar. The toad sits. You sit.</li>
+        <li>Last call is a suggestion. The toad stays anyway.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="/logo.jpg" alt="" width="56" height="56" decoding="async">
+  <p>Toadstool. A meme, not a promise.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged meme">
+  <form method="dialog"><button class="lightbox__close" type="submit" aria-label="Close">Close</button></form>
+  <img id="lightbox-img" src="/wait.jpg" alt="">
+</dialog>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
